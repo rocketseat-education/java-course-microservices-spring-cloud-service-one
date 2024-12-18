@@ -1,4 +1,4 @@
-package com.rocketseat.service.one;
+package com.rocketseat.service.tasks;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
