@@ -11,7 +11,7 @@ public class TaskNotificationSchedule {
         this.taskService = taskService;
     }
 
-    @Scheduled(fixedRate = 360000 * 24)
+    @Scheduled(fixedRate = 60)
     public void checkAndNotifyTasks(){
         this.taskService.sendNotificationForDueTasks();
     }

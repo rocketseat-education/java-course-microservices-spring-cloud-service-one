@@ -1,10 +1,10 @@
 package com.rocketseat.service.tasks;
 
 
-import org.springframework.stereotype.Service;
-
 import java.time.LocalDateTime;
 import java.util.List;
+
+import org.springframework.stereotype.Service;
 
 @Service
 public class TaskService {
@@ -24,6 +24,7 @@ public class TaskService {
             NotificationRequest request = new NotificationRequest("Sua tarefa: " + task.getTitle() + "está prestes a vencer", task.getEmail());
             notificationClient.sendNotification(request);
             task.setNotified(true);
+            tasksRepository.save(task);
         }
     }
 }
